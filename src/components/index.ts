@@ -1,2 +1,2 @@
 export { Icon } from './icon';
-export { UserInfo } from './userInfo';
+export { UserInfo } from './user-info';
