@@ -1,6 +1,7 @@
 /** @type {import('eslint').Linter.Config} */
 const config = {
   extends: [
+    'eslint:recommended',
     'next/core-web-vitals',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
@@ -8,7 +9,8 @@ const config = {
     'plugin:prettier/recommended'
   ],
   rules: {
-    'prettier/prettier': ['error', require('./.prettierrc.js')]
+    'prettier/prettier': ['error', require('./.prettierrc.js')],
+    'no-unused-vars': 'off'
   },
   globals: {
     React: 'writable'
