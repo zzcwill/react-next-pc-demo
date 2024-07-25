@@ -1,9 +1,11 @@
 'use client';
 
-export { Cookie, LocalStorage, SessionStorage } from './cache';
+export { cookieCache, localStorageCache, sessionStorageCache } from './cache';
 
 export { sleep } from './sleep';
 
 export { uuid } from './uuid';
 
-export { getUrlParamData } from './url';
+export { getUrlData } from './url';
+
+export { loadJS, loadCSS, downloadFileByUrl } from './file';

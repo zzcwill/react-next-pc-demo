@@ -2,7 +2,7 @@ import Cookies from 'js-cookie';
 
 const prefix = 'react-next-pc-demo';
 
-export const Cookie = {
+export const cookieCache = {
   getItem(key: string) {
     return Cookies.get(`${prefix}_${key}`) || Cookies.get(key) || '';
   },
@@ -23,7 +23,7 @@ export const Cookie = {
   }
 };
 
-export const LocalStorage = {
+export const localStorageCache = {
   getItem(key: string) {
     return localStorage.getItem(`${prefix}_${key}`) || localStorage.getItem(key) || '';
   },
@@ -35,7 +35,7 @@ export const LocalStorage = {
   }
 };
 
-export const SessionStorage = {
+export const sessionStorageCache = {
   getItem(key: string) {
     return sessionStorage.getItem(`${prefix}_${key}`) || sessionStorage.getItem(key) || '';
   },

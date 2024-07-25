@@ -1,5 +1,5 @@
 // 获取url参数
-export function getUrlParamData() {
+export function getUrlData() {
   const url = location.href;
   const paramArr = url.slice(url.indexOf('?') + 1).split('&');
   const params = {};
