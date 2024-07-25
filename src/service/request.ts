@@ -5,14 +5,14 @@ import { message } from 'antd';
 
 const getBaseUrl = () => {
   const baseApiConfig: any = {
-    dev: 'http://43.142.124.132:8866/api/trpc/',
-    test: 'http://43.142.124.132:8866/api/trpc/',
-    pro: 'https://yytj.shop/api'
+    dev: 'https://cnodejs.org/api/v1/',
+    test: 'https://cnodejs.org/api/v1/',
+    pro: 'https://cnodejs.org/api/v1/'
   };
 
   const appEnv = process.env.APP_ENV || 'dev';
   const baseApi = baseApiConfig[appEnv];
-  // console.info('baseApi', process.env.APP_ENV, baseApi);
+  console.info('baseApi', process.env.APP_ENV, baseApi);
   return baseApi;
 };
 
@@ -58,12 +58,12 @@ request.interceptors.response.use(
 
     // message.success('请求成功');
 
-    return resData.data;
+    return resData;
   },
   (err) => {
     // http状态码不为200时-错误处理
     if (err) {
-      console.info(err);
+      console.info('request', err);
     }
   }
 );

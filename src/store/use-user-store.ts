@@ -3,7 +3,7 @@ import { devtools } from 'zustand/middleware';
 import { immer } from 'zustand/middleware/immer';
 
 type IUser = {
-  id?: string;
+  id: string;
   token?: string;
   nickName?: string;
   avatar?: string;
